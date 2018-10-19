@@ -1,0 +1,72 @@
+---
+
+# Netwokrs
+# ----------------
+
+network_name: deployment
+singleton_availability_zone: us-west-2a
+az2_name: us-west-2b
+az3_name: us-west-2c
+
+# AWS Config
+# -------------------
+# Remember the vault params are fetched through secrets_to_store in pipeline-vars.yml
+aws_endpoints/default_option/region: us-west-2
+
+# Broker Config
+# ===============
+
+backing_db_selector/p_mysql/plan_name: db-small
+backing_db_selector/p_mysql/service_instance_name: aws-service-p-mysql
+
+
+
+
+
+# Errands
+# ----------------
+
+delete-errand_post_deploy_state: default
+delete-errand_pre_delete_state: default
+deploy-errand_post_deploy_state: false
+deploy-errand_pre_delete_state: false
+
+
+
+rds_aurora_plans_0/CreateDBCluster_PreferredBackupWindow: 13:00-14:00
+rds_aurora_plans_0/CreateDBCluster_StorageEncrypted:
+rds_aurora_plans_0/CreateDBInstance_DBParameterGroupName: a
+rds_mariadb_plans_0/CreateDBInstance_DBParameterGroupName: a
+rds_mariadb_plans_0/CreateDBInstance_Iops: 3 
+rds_mariadb_plans_0/CreateDBInstance_PreferredBackupWindow: 13:00-14:00
+rds_mariadb_plans_0/CreateDBInstance_StorageEncrypted: 
+rds_mysql_plans_0/CreateDBInstance_DBParameterGroupName: a
+rds_mysql_plans_0/CreateDBInstance_Iops: 3
+rds_mysql_plans_0/CreateDBInstance_PreferredBackupWindow: 13:00-14:00
+rds_mysql_plans_0/CreateDBInstance_StorageEncrypted: 
+rds_oracle_plans_0/CreateDBInstance_Iops: 3
+rds_oracle_plans_0/CreateDBInstance_PreferredBackupWindow: 13:00-14:00
+rds_oracle_plans_0/CreateDBInstance_StorageEncrypted: 
+rds_postgres_plans_0/CreateDBInstance_DBParameterGroupName: a
+rds_postgres_plans_0/CreateDBInstance_Iops: 3
+rds_postgres_plans_0/CreateDBInstance_PreferredBackupWindow: 13:00-14:00
+rds_postgres_plans_0/CreateDBInstance_StorageEncrypted: 
+rds_sqlserver_plans_0/CreateDBInstance_Iops: 3
+rds_sqlserver_plans_0/CreateDBInstance_PreferredBackupWindow: 13:00-14:00
+rds_sqlserver_plans_0/CreateDBInstance_StorageEncrypted:
+s3_plans_0/KMSKeyARN:
+
+rds_aurora_plans_0/bullets: |
+  Blah
+rds_mariadb_plans_0/bullets: |
+  Blah
+rds_mysql_plans_0/bullets: |
+  Blah
+rds_oracle_plans_0/bullets: |
+  Blah
+rds_postgres_plans_0/bullets: |
+  Blah
+rds_sqlserver_plans_0/bullets: |
+  Blah
+s3_plans_0/bullets: |
+  Blah
