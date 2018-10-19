@@ -3,7 +3,7 @@
 # Netwokrs
 # ----------------
 
-network_name: deployment
+network_name: services
 singleton_availability_zone: us-west-2a
 az2_name: us-west-2b
 az3_name: us-west-2c
@@ -26,47 +26,62 @@ backing_db_selector/p_mysql/service_instance_name: aws-service-p-mysql
 # Errands
 # ----------------
 
-delete-errand_post_deploy_state: default
-delete-errand_pre_delete_state: default
+delete-errand_post_deploy_state: false
+delete-errand_pre_delete_state: false
 deploy-errand_post_deploy_state: false
 deploy-errand_pre_delete_state: false
 
 
 
-rds_aurora_plans_0/CreateDBCluster_PreferredBackupWindow: 13:00-14:00
-rds_aurora_plans_0/CreateDBCluster_StorageEncrypted:
+rds_aurora_plans_0/CreateDBCluster_PreferredBackupWindow: "13:00-14:00"
+
+rds_aurora_plans_0/CreateDBCluster_StorageEncrypted: "abc"
 rds_aurora_plans_0/CreateDBInstance_DBParameterGroupName: a
 rds_mariadb_plans_0/CreateDBInstance_DBParameterGroupName: a
 rds_mariadb_plans_0/CreateDBInstance_Iops: 3 
-rds_mariadb_plans_0/CreateDBInstance_PreferredBackupWindow: 13:00-14:00
-rds_mariadb_plans_0/CreateDBInstance_StorageEncrypted: 
+rds_mariadb_plans_0/CreateDBInstance_PreferredBackupWindow: "13:00-14:00"
+rds_mariadb_plans_0/CreateDBInstance_StorageEncrypted: "abc"
 rds_mysql_plans_0/CreateDBInstance_DBParameterGroupName: a
 rds_mysql_plans_0/CreateDBInstance_Iops: 3
-rds_mysql_plans_0/CreateDBInstance_PreferredBackupWindow: 13:00-14:00
-rds_mysql_plans_0/CreateDBInstance_StorageEncrypted: 
+rds_mysql_plans_0/CreateDBInstance_PreferredBackupWindow: "13:00-14:00"
+rds_mysql_plans_0/CreateDBInstance_StorageEncrypted: "abc"
 rds_oracle_plans_0/CreateDBInstance_Iops: 3
-rds_oracle_plans_0/CreateDBInstance_PreferredBackupWindow: 13:00-14:00
-rds_oracle_plans_0/CreateDBInstance_StorageEncrypted: 
+rds_oracle_plans_0/CreateDBInstance_PreferredBackupWindow: "13:00-14:00"
+rds_oracle_plans_0/CreateDBInstance_StorageEncrypted: "abc"
 rds_postgres_plans_0/CreateDBInstance_DBParameterGroupName: a
 rds_postgres_plans_0/CreateDBInstance_Iops: 3
-rds_postgres_plans_0/CreateDBInstance_PreferredBackupWindow: 13:00-14:00
-rds_postgres_plans_0/CreateDBInstance_StorageEncrypted: 
+rds_postgres_plans_0/CreateDBInstance_PreferredBackupWindow: "13:00-14:00"
+rds_postgres_plans_0/CreateDBInstance_StorageEncrypted: "abc"
 rds_sqlserver_plans_0/CreateDBInstance_Iops: 3
-rds_sqlserver_plans_0/CreateDBInstance_PreferredBackupWindow: 13:00-14:00
-rds_sqlserver_plans_0/CreateDBInstance_StorageEncrypted:
-s3_plans_0/KMSKeyARN:
+rds_sqlserver_plans_0/CreateDBInstance_PreferredBackupWindow: "13:00-14:00"
+rds_sqlserver_plans_0/CreateDBInstance_StorageEncrypted: "abc"
+s3_plans_0/KMSKeyARN: ""
 
 rds_aurora_plans_0/bullets: |
   Blah
+  bah
+
 rds_mariadb_plans_0/bullets: |
   Blah
+  bah
+
 rds_mysql_plans_0/bullets: |
   Blah
+  bah
+
 rds_oracle_plans_0/bullets: |
   Blah
+  bah
+
 rds_postgres_plans_0/bullets: |
   Blah
+  bah
+
 rds_sqlserver_plans_0/bullets: |
   Blah
+  bah
+
 s3_plans_0/bullets: |
   Blah
+  bah
+
